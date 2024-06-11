@@ -15,7 +15,7 @@ const SignUp = () => {
     email: null,
     emailOtp: null,
     name: null,
-    role: null,
+    // role: null,
     password: null,
     isEmailOtpSent: null,
     emailVerified: null,
@@ -143,7 +143,7 @@ const SignUp = () => {
       email: email,
       password: password,
       userName: name,
-      role: 'individual'
+      // role: 'individual'
     })
       .then((res) => {
         dispatch(

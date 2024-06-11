@@ -18,7 +18,7 @@ const send_mail = require("../helpers/EmailSending");
 
 exports.register = async (req, res, next) => {
   try {
-    const { email, phone, userName } = req.body;
+    const { email, userName } = req.body;
     // validating email and password
     const validating_email_password = await authSchema.validateAsync(req.body);
 
@@ -32,7 +32,7 @@ exports.register = async (req, res, next) => {
     // Checking user already exist or not
     const userDoesExist = await User.findOne({ email: email });
     const userNameDoesExist = await User.findOne({ userName: userName });
-    const phoneExist = await User.findOne({ phone: phone });
+    // const phoneExist = await User.findOne({ phone: phone });
     const ErrorMessages = [];
     if (userDoesExist) {
       ErrorMessages.push("Email");
@@ -41,10 +41,6 @@ exports.register = async (req, res, next) => {
     if (userNameDoesExist) {
       ErrorMessages.push("User Name ");
       // return res.status(404).json({message: 'User Name Already Exist'})
-    }
-    if (phoneExist) {
-      ErrorMessages.push("Phone Number ");
-      // return res.status(404).json({message: 'Phone Number Already Exist'})
     }
 
     if (ErrorMessages.length > 0) {
@@ -55,7 +51,7 @@ exports.register = async (req, res, next) => {
     await User.create({
       email,
       password: passwordHashing,
-      phone,
+      // phone,
       userName,
       verification: "initial",
     });
