@@ -191,16 +191,8 @@ const Login = () => {
           </div>
         </div>
         <div className="signup-left-container">
-          <div className="signup-left-content"><h1>Become a Task Creater</h1>
-            <p>Free to use, easy to track</p>
-            <div className="checks"><div><span class="tick"><i class="fas fa-check"></i></span> Create a Project</div>
-              <div><span class="tick"><i class="fas fa-check"></i></span> Add tasks to projects</div>
-              <div><span class="tick"><i class="fas fa-check"></i></span> Assign tasks to team members</div>
-              <div><span class="tick"><i class="fas fa-check"></i></span> Set project goals and milestones</div>
-              <div><span class="tick"><i class="fas fa-check"></i></span> Track your progress</div>
-              <div><span class="tick"><i class="fas fa-check"></i></span> Monitor task status and completion</div></div></div>
           <div className="signup-image-container">
-            <img src="signup.png" alt="error" />
+            <img src="Login.svg" alt="error" />
           </div>
         </div>
       </main>

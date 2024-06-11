@@ -122,7 +122,7 @@ const App = () => {
           <Route path="/login" Component={LoginAuth(Login)} />
           <Route path="/forgotpassword" Component={LoginAuth(ForgotPassword)} />
           <Route path="*" element={<NoMatch />} />
-          <Route path="/home" Component={AuthHoc(Home)} />
+          <Route path="/" Component={AuthHoc(Home)} />
         </Routes>
       </Suspense>
     </div>
